@@ -58,3 +58,20 @@ def query_post():
 # db.drop_all()
 # db.create_all()
 print User.query.all()```
+
+
+Part 6 Password hasing
+Flask-bcrypt
+
+
+password = = 'testing'
+
+# password as bytes
+hashed_pw = bcrypt.generate_password_hash('PASSWORD')
+
+# password as string
+hashed_pw = bcrypt.generate_password_hash('PASSWORD').decode('utf-8')
+
+bcrypt.check_password_hash(hashed_pw, 'password') # false
+bcrypt.check_password_hash(hashed_pw, 'testing') # true
+
