@@ -75,3 +75,8 @@ hashed_pw = bcrypt.generate_password_hash('PASSWORD').decode('utf-8')
 bcrypt.check_password_hash(hashed_pw, 'password') # false
 bcrypt.check_password_hash(hashed_pw, 'testing') # true
 
+
+Part 11 - Blueprints and Configuration
+
+* Each section (blueprint) of the app will be considered its own package
+* Blueprints can also hold their own templates and static folders
